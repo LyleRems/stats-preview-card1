@@ -1,0 +1,172 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-size: 15px;
+    background-color: var(--Verydkblue);
+    
+}
+:root{
+    --Verydkblue: hsl(233, 47%, 7%);
+    --Dkdesblue: hsl(244, 38%, 16%);
+    --Softviolet: hsl(277, 64%, 61%);  
+    --White: hsl(0, 0%, 100%);
+    --transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+}
+h1{
+    font-family: 'Inter', sans-serif;
+    color: var(--White);
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+h2{
+    font-family: 'Inter', sans-serif;
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    color: var(--Slightlytransparentwhite);
+    font-size: .938rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+span{
+    color: var(--Softviolet);
+}
+.insights-wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 800px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Verydkblue);
+    
+}
+.insights-container{
+    overflow:hidden;
+    display: flex;
+    max-width: 1111px;
+    height:450px;
+    width: 100%;
+}
+.left-column-content{
+    background-color: var(--Dkdesblue);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 5px 10px 10px 75px;
+    border-radius: .625rem 0 0 .625rem;
+    overflow: hidden;
+    max-width: 540px;
+    width: 100%;
+    height: 100%;
+}
+
+/*Inner top Width set to help match project style*/
+.inner-top{
+    max-width: 83%;
+}
+
+/*Blended background color with image*/
+.right-column-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Softviolet);
+    background-image: url(images/image-header-desktop.jpg);
+    background-blend-mode:multiply;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 .625rem .625rem 0;
+    max-width: 540px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.inner-bottom-items{
+    display: flex;
+}
+
+/*Margin used for aligning items instead of justify-content spacing*/
+.item-1, .item-2{
+    margin-right: 50px;
+    
+}
+.inner-bottom-items p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: .838rem;
+    margin-top: -15px;
+    letter-spacing: 1px;
+    
+}
+
+
+@media screen and (max-width: 1024px){
+    .insights-container{
+        overflow:hidden;
+        flex-direction: column;
+        flex-flow: column-reverse;
+        max-width: 330px;
+        width: 100%;
+        min-height:793px;
+        height: 100%;
+        }
+        .insights-wrapper{
+            height: 960px;
+            padding: 65px 10px;
+        }
+        .right-column-content{
+            flex-direction: column;
+            background-image: url(images/image-header-mobile.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: .625rem .625rem 0 0;
+            max-width: 100%;
+            width: 100%;
+            height: 347px;
+            overflow: hidden;
+        }
+        .left-column-content{
+            justify-content: center;
+            align-items: center;
+            padding:0;
+            border-radius: 0 0 .625rem .625rem;
+            overflow: hidden;
+            max-width: 330px;
+            width: 100%;
+            height: 100%;
+        }
+        .inner-top{
+            max-width: 90%;
+            text-align: center;
+        }
+        .inner-top p{
+            padding: 0 20px;
+            
+        }
+        .inner-bottom-items{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-1, .item-2, .item-3{
+            margin-right: 0;
+            text-align: center;
+            
+        }
+}
